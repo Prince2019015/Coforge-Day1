@@ -1,0 +1,10 @@
+package com.coforge.Day2;
+
+public class Hello {
+	
+	String name="prince";
+	public String sayHello(String name) {
+		return "Hello"+name;
+	}
+
+}

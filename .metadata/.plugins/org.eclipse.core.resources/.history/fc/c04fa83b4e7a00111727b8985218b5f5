@@ -1,0 +1,10 @@
+package com.coforge.Day7;
+
+public class AgeNotSufficentException extends Exception{
+	
+	
+	public AgeNotSufficentException(String msg) {
+		super(msg);
+	}
+
+}

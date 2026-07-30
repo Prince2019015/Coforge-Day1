@@ -1,0 +1,105 @@
+//package com.coforge.Day6;
+////CHANGED: removed "import java.awt.List;" — this was a wrong import (AWT's List, not Collections' List)
+////and was not even the right type to assign LinkedList's reversed()/copy result to.
+//import java.util.Collections;
+//import java.util.Iterator;
+//import java.util.LinkedList;
+//public class App {
+// public static void main(String[] args) {
+//    LinkedList<String> namesList=new LinkedList<String>();
+//    namesList.add("Swapna");
+//    namesList.add("Amit");
+//    namesList.add("Priya");
+//    namesList.add("Priya");
+////    namesList.add(null);
+////    namesList.add(null);
+//    System.out.println(namesList);
+//    System.out.println("*******************");
+//    namesList.addFirst("Pooja");
+//    namesList.addLast("Keerti");//returns void
+//    System.out.println(namesList);
+//    System.out.println("--------------------");
+////    Iterator<String> itr=namesList.iterator();
+////    while(itr.hasNext())
+//// 	   System.out.println(itr.next());
+//    System.out.println("--------------------");
+//    Iterator itr=namesList.descendingIterator();
+//    while(itr.hasNext())
+// 	   System.out.println(itr.next());
+//    System.out.println("--------------------");
+//    System.out.println(namesList.element());
+//    System.out.println("--------------------");
+//    System.out.println(namesList.offer("Mona"));//returns true if object added
+//    System.out.println(namesList.offerFirst("Kriti"));
+//    System.out.println(namesList);
+//    
+//    System.out.println("Peek name or first name :"+namesList.peek());
+//    // CHANGED: namesList.reversed() is a SequencedCollection method (Java 21+),
+//    // and it returns a List<String> view, not a LinkedList<String> — so this line
+//    // would fail on two counts under Java 17. Fix: copy the list, then reverse
+//    // it in place with Collections.reverse(), which is available since Java 1.2.
+//    LinkedList<String> list = new LinkedList<>(namesList);
+//    Collections.reverse(list);
+//    System.out.println(list);
+//    
+//    System.out.println("--------------------");
+//    Collections.sort(namesList);
+//    System.out.println(namesList);
+//    
+//    
+//    
+//    
+//    
+// }
+//}
+package com.coforge.Day_06_07_26_CollectionsPrj;
+
+import java.awt.List;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedList;
+
+
+public class App {
+    public static void main(String[] args) {
+       LinkedList<String> namesList=new LinkedList<String>();
+       namesList.add("Swapna");
+       namesList.add("Amit");
+       namesList.add("Priya");
+       namesList.add("Priya");
+//       namesList.add(null);
+//       namesList.add(null);
+       System.out.println(namesList);
+       System.out.println("*******************");
+       namesList.addFirst("Pooja");
+       namesList.addLast("Keerti");//returns void
+       System.out.println(namesList);
+       System.out.println("--------------------");
+//       Iterator<String> itr=namesList.iterator();
+//       while(itr.hasNext())
+//    	   System.out.println(itr.next());
+       System.out.println("--------------------");
+       Iterator itr=namesList.descendingIterator();
+       while(itr.hasNext())
+    	   System.out.println(itr.next());
+       System.out.println("--------------------");
+       System.out.println(namesList.element());
+       System.out.println("--------------------");
+       System.out.println(namesList.offer("Mona"));//returns true if object added
+       System.out.println(namesList.offerFirst("Kriti"));
+       System.out.println(namesList);
+       
+       System.out.println("Peek name or first name :"+namesList.peek());
+       LinkedList<String> list= namesList.reversed();
+       System.out.println(list);
+       
+       System.out.println("--------------------");
+       Collections.sort(namesList);
+       System.out.println(namesList);
+       
+       
+       
+       
+       
+    }
+}

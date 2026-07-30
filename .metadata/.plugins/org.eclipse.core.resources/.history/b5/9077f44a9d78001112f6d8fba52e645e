@@ -1,0 +1,5 @@
+package com.coforge.Day2;
+
+public interface SimpleCalculator {
+
+}
